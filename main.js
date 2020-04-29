@@ -108,8 +108,11 @@ const ducks = [
   
     for (let i = 0; i < duckCollection.length; i++) {
         const duckies = duckCollection[i];
+
+        domString += `<div class="container">`;
+
         domString += `
-        <div class="duck">
+        <div class="card col-2 duck">
           <h2>${duckies.name}</h2>
           <img src="${duckies.imageUrl}" alt="duck">
           <h4>BREED: ${duckies.breed}</h4>
@@ -117,9 +120,24 @@ const ducks = [
           <h4>TEMPERAMENT: ${duckies.temperament}</h4>
         </div>
       `;
+
+        domString += `</div>`;
+
     }
      printToDom('#duckDiv', domString);
   }
+
+const filterSize = (event) => {
+    const buttonId = event.target.id;
+    const sizeFilteredDucks = [];
+    if (buttonId === 'small');
+    return;
+}
+
+for (let i = 0; i < ducks.length; i++); 
+    if (ducks[i].size === buttonId) {
+        sizeFilteredDucks.push(ducks[i]);
+    }
 
   const init = () => {
       createDucks(ducks);
